@@ -150,7 +150,7 @@ After inserting values for the attribute such as the Glucose, age, and Blood Pre
 
 To download a diabetes detection, you can use the git clone command. This command creates a copy of the repository in a new directory on your local machine.
 ```
-git clone https://github.com/nileshparab42/Diabetes-Detection.git
+git clone https://github.com/knight0801/diabetes-prediction.git
 ```
 To set up the project, you can use the pip command to install the required packages specified in the requirements.txt file.
 ```
@@ -235,7 +235,7 @@ It's worth noting that you can also use frameworks like Flask-CLI or Flask-Scrip
 
 ## Authors
 
-- [Nilesh Parab](https://github.com/nileshparab42) (Project Lead) - [Website](https://nileshparab10.blogspot.com/)
+- [Avinash Gourav](https://github.com/knight0801/knight0801.git)
   
 
 ## Acknowledgements
