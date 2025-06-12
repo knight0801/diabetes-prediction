@@ -2,20 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prediction Result</title>
+    <title>Prediction Result | Diabetes Detection</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body class="bg-light">
 
     <div class="container mt-5">
         <div class="card text-center shadow-lg p-5">
-            <h2 class="text-success mb-4">Prediction Result</h2>
+            <h2 class="text-primary mb-4">
+                <i class="bi bi-activity"></i> Prediction Result
+            </h2>
 
-            <!-- Show prediction result -->
-            <h4>{{ prediction }}</h4>
+            <!-- Display the prediction result -->
+            {% if "unlikely" in prediction %}
+                <div class="alert alert-success fs-5 fw-semibold">
+                    {{ prediction }}
+                </div>
+            {% else %}
+                <div class="alert alert-danger fs-5 fw-semibold">
+                    {{ prediction }}
+                </div>
+            {% endif %}
 
-            <!-- Optional: Show chart if available -->
+            <!-- Optional chart display -->
             {% if chart_url %}
                 <div class="mt-4">
                     <img src="{{ url_for('static', filename='charts/' + chart_url.split('/')[-1]) }}"
@@ -26,7 +37,9 @@
             {% endif %}
 
             <div class="mt-4">
-                <a href="/" class="btn btn-secondary">🔙 Go Back</a>
+                <a href="/" class="btn btn-outline-primary">
+                    <i class="bi bi-arrow-left-circle-fill"></i> Predict Again
+                </a>
             </div>
         </div>
     </div>
