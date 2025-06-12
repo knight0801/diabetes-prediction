@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diabetes Prediction</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    input[type="number"], input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Diabetes Prediction Form</h2>
+    <form action="/result" method="post">
+      <label>Age:</label>
+      <input type="number" name="Age" required />
+
+      <label>Glucose:</label>
+      <input type="number" name="Glucose" required />
+
+      <label>Blood Pressure:</label>
+      <input type="number" name="BloodPressure" required />
+
+      <label>Insulin:</label>
+      <input type="number" name="Insulin" required />
+
+      <label>BMI:</label>
+      <input type="text" name="BMI" required />
+
+      <label>Skin Thickness:</label>
+      <input type="number" name="SkinThickness" required />
+
+      <label>Diabetes Pedigree Function:</label>
+      <input type="text" name="DiabetesPedigreeFunction" required />
+
+      <input type="submit" value="Predict" />
+    </form>
+  </div>
+</body>
+</html>

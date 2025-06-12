@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="card text-center shadow-lg p-5">
+            <h2 class="text-success mb-4">Prediction Result</h2>
+
+            <!-- Show prediction result -->
+            <h4>{{ prediction }}</h4>
+
+            <!-- Optional: Show chart if available -->
+            {% if chart_url %}
+                <div class="mt-4">
+                    <img src="{{ url_for('static', filename='charts/' + chart_url.split('/')[-1]) }}"
+                         alt="Prediction Chart"
+                         class="img-fluid"
+                         style="max-width: 300px;">
+                </div>
+            {% endif %}
+
+            <div class="mt-4">
+                <a href="/" class="btn btn-secondary">🔙 Go Back</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
