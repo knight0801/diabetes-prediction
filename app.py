@@ -15,7 +15,6 @@ def home():
 def result():
     try:
         data = [
-            float(request.form['Pregnancies']),
             float(request.form['Glucose']),
             float(request.form['BloodPressure']),
             float(request.form['SkinThickness']),
